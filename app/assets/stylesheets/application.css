@@ -1,0 +1,34 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+/* BODY */
+.body{
+  font-family: "Calibri";
+  font-size:1.1em;
+  color:#ecf644;
+  margin:0;
+  top:50px;
+  left:0px;
+  position:relative;
+  padding-bottom:60px; /*added this line - I think we both looked at the same google article! */
+}
+
+#footer{
+	font-family: "Calibri";
+	font-size:1.1em;
+	color:#fff;
+	/*position:absolute;*/  /*took this out and it fixed the floating footer*/
+	bottom:0;
+	height:60px;			/* Height of the footer */
+}

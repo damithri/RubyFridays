@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>D and Mark Learn Ruby on Rails | <%= @title %></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Ranchers' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="container">
+	<div align="right" class="menu">
+		<%= link_to "HOME", "/pages/home", :class => "menu"  %> - <%= link_to "ABOUT US", "/pages/about", :class => "menu"  %> - <%= link_to "CONTACT US", "/pages/contact", :class => "menu"  %>
+		<h1><a href="/index.html"><img src="/images/logo.png" align="left" class="cont"></a> D and Mark Learn Ruby on Rails</h1>
+		<p class="heading"><%= @title%></p>
+	</div>
+
+	<div class="body">
+		<%= yield %>
+	</div>
+	
+	<div id="footer">
+		<p><%= company_link %></p>
+	</div>
+</div>
+</body>
+</html>

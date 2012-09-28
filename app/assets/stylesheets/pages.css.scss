@@ -1,0 +1,111 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*GENERAL*/
+body{
+  background-image:url(../images/back.png);
+  background-position:top;
+  background-repeat:repeat-x;
+  background-color:#5d5d5d;
+  font-size:100%;
+}
+
+#container{
+  width:900px;
+  margin:0 auto;
+}
+
+p,li,td,a{
+  font-family: "Calibri";
+  font-size:1.1em; 
+}
+p{
+  color:#fff;
+  padding-left:55px;
+ }
+
+
+li,td{
+  color:#fff;
+ }
+ 
+a{
+  color:#ecf644;
+  text-decoration:none;
+ }
+ 
+a:visited{
+  text-decoration:none;
+ }
+ 
+a:hover{
+  color:#ecf644;
+  text-decoration:underline;
+ }  
+ 
+/*MENU*/
+.menu{
+   font-family: 'Ranchers', cursive;
+   color:#fff;
+}
+a.menu{
+  color:#fff;
+  text-decoration:none;
+  font-size:1.2em;
+  font-family: 'Ranchers', cursive;
+  }
+  
+a.menu:visited{
+  color:#fff;
+  text-decoration:none;
+  }  
+  
+a.menu:hover{
+  color:#ecf644;
+  text-decoration:none;
+  }
+
+#about{
+  width:700px;
+  height:200px;
+  border-bottom:1px #ccc;
+  
+}
+
+.cont{
+  padding-right:5px;
+  border:0;
+  
+}
+  
+/* HEADINGS*/
+
+h1{
+  font-family: 'Ranchers', cursive;
+  font-size:2em;
+  margin:0;
+  color: white; text-shadow: black 0.1em 0.1em 0.2em;
+  top:5px;
+  position:absolute;
+}
+
+.heading{
+  font-family: 'Ranchers', cursive;
+  font-size:1.5em;
+  color:#ecf644;
+  margin:0;
+  top:7px;
+  left:0px;
+  position:relative;
+}
+
+.subheading{
+  font-family: "Calibri";
+  font-size:1.2em;
+  color:#fff;
+  font-weight:bold;
+  text-transform:uppercase;
+  margin-bottom:0;
+}
+

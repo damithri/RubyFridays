@@ -1,0 +1,18 @@
+
+
+<% @news_items.each do | news_item |%>
+    
+   	<hr>
+	<table border="0">
+	<tr>
+	<td colspan="2"><b><%= news_item.title %></b></td>
+	</tr>
+	<tr>
+	<td>Message: </td>
+	<td><i><%= news_item.body %></i></td>
+	</tr>
+	</table>
+		
+<% end %>
+
+<%= link_to "Create news Item" , "/news_items/new"%>
