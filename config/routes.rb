@@ -5,11 +5,19 @@ Rubyfridays::Application.routes.draw do
 
   get "pages/contact"
   
-  match "/news_items" => "news_items#index", :via => :get
+  resources :news_items
   
-  match "/news_items" => "news_items#create", :via => :post
+  # match "/news_items" => "news_items#index", :via => :get
   
-  match "/news_items/new" => "news_items#new"
+  #match "/news_items" => "news_items#create", :via => :post
+  
+  #match "/news_items/new" => "news_items#new"
+  
+  #match "/news_items/:id/edit" => "news_items#edit", :via => :get , :as => :edit_news_item
+  
+  #match "/news_items/:id" => "news_items#update", :via => :put , :as => :news_item
+  
+  #match "/news_items/:id" => "news_items#show", :via => :get , :as => :news_item
   
   # root :to => 'pages#home'
   

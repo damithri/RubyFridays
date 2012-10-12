@@ -9,7 +9,11 @@
 	</tr>
 	<tr>
 	<td>Message: </td>
-	<td><i><%= news_item.body %></i></td>
+	<td><i><%= news_item.body %></i>
+		<br/>
+		<%= link_to "edit", edit_news_item_path(news_item)%>
+		
+	</td>
 	</tr>
 	</table>
 		

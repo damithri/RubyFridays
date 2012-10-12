@@ -14,4 +14,13 @@ class NewsItemsController < ApplicationController
       redirect_to "/news_items/new"
      end
    end
+   def edit
+     @news_item=NewsItem.find(params[:id])
+   end
+   def update
+     @news_items=NewsItem.find(params[:id])
+     @news_items.update_attributes(params[:news_item])
+     @news_items.save
+     redirect_to "/news_items"
+   end
  end
