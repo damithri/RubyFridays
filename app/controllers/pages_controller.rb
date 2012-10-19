@@ -13,3 +13,4 @@ class PagesController < ApplicationController
     @title="Contact Us"
   end
 end
+# comments change
