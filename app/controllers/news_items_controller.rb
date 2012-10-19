@@ -18,9 +18,17 @@ class NewsItemsController < ApplicationController
      @news_item=NewsItem.find(params[:id])
    end
    def update
-     @news_items=NewsItem.find(params[:id])
-     @news_items.update_attributes(params[:news_item])
-     @news_items.save
+     @news_item=NewsItem.find(params[:id])
+     @news_item.update_attributes(params[:news_item])
+     @news_item.save
      redirect_to "/news_items"
    end
+   def destroy
+     @news_item=NewsItem.find(params[:id])
+     @news_item.destroy
+     redirect_to "/news_items"
+   end
+   def show
+     @news_item=NewsItem.find(params[:id])
+     end
  end
