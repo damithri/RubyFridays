@@ -1,3 +1,5 @@
+# hello this is a change
+
 class NewsItemsController < ApplicationController
   def index
     @news_items=NewsItem.all
