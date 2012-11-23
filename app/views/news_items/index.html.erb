@@ -25,6 +25,23 @@
 		
 <% end %>
 
-<%= link_to "Create news Item" , "#" %>
-<div id="create-form">
-</div>
+<%= link_to "Create news Item" , "#", :id => "news_item_create" %> <!--gave the link an ID -->
+	
+	<div id="create-form" class="form"> <!--added a bit of styling to the div-->
+		<%= render "form"%> <!--Calling the partial to show the form-->
+	</div>
+
+<!--keeping the JavaScript on page for now-->
+<script type="text/javascript">
+	$().ready(function(){
+		$("#create-form").hide(); /*start off hidden*/ 
+		create_news_item(); /*call function */
+ 	});
+ 
+ 
+ 	function create_news_item(){
+ 		$('#news_item_create').click(function() {
+ 			$("#create-form").show();
+		});
+ 	}
+</script>
