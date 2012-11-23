@@ -4,6 +4,7 @@ class NewsItemsController < ApplicationController
   def index
     @news_items=NewsItem.all
     @title="News Items"
+    @news_item=NewsItem.new #added this here to reference partial and to invoke the new action because we're calling it from the index page now.
       end
    def new
      @news_item=NewsItem.new
