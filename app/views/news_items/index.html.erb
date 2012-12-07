@@ -25,7 +25,10 @@
 		
 <% end %>
 
+<%= link_to "Test AJAX Link", "#", :id => "test_ajax" %>
 <%= link_to "Create news Item" , "#", :id => "news_item_create" %> <!--gave the link an ID -->
+	
+	<div id="mydiv"></div>
 	
 	<div id="create-form" class="form"> <!--added a bit of styling to the div-->
 		<%= render "form"%> <!--Calling the partial to show the form-->
@@ -36,6 +39,8 @@
 	$().ready(function(){
 		$("#create-form").hide(); /*start off hidden*/ 
 		create_news_item(); /*call function */
+		
+		$("#test_ajax").click(testAjax);
  	});
  
  
@@ -43,5 +48,24 @@
  		$('#news_item_create').click(function() {
  			$("#create-form").show();
 		});
+ 	}
+ 	
+ 	function testAjax() {
+ 		
+ 		var title = $("news_item_title").val();
+ 		var body = $("news_item_body").val();
+ 		
+ 		
+ 		$.ajax({
+ 			url : "/news_items",
+ 			data: { body : body, title : title },
+ 			type: "POST",
+			dataType : "json",
+			success : function(data, textStatus, jqXHR) {
+				
+			},
+			error : function(jqXHR, textStatus, errorThrown) {
+			}
+ 		});
  	}
 </script>

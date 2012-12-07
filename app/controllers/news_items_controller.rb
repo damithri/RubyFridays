@@ -4,6 +4,12 @@ class NewsItemsController < ApplicationController
     @news_items=NewsItem.all
     @title="News Items"
     @news_item=NewsItem.new #added this here to reference partial and to invoke the new action because we're calling it from the index page now.
+  
+    respond_to do |format|
+      format.html {}
+      format.json { render :json => @news_items.to_json } 
+    end
+  
   end
 
   def new
@@ -17,6 +23,7 @@ class NewsItemsController < ApplicationController
     else
       redirect_to "/news_items/new"
     end
+   
   end
 
   def edit
